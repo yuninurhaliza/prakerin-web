@@ -13,8 +13,8 @@
 
     <?php
 
-include ('connection_tambah_bank.php');
-$query      = mysqli_query($connect, "SELECT * FROM tb_bank");
+include ('connection.php');
+$query      = mysqli_query($connect, "SELECT * FROM tb_valas");
 $results    = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
 ?>
@@ -42,29 +42,30 @@ $results    = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     <table id="example" class="table table-striped table-bordered" style="width:100%">
                         <thead class="table-danger">
                             <tr>
-                                <th class="col-xs-12 text-center" style="width: 50px;">No</th>
+                                <th class="col-xs-12 text-center" style="width: 50px;">no</th>
                                 <th class="col-xs-12 text-center" style="width:200px;">nama bank</th>
-                                <th class="col-xs-12 text-center" style="width:200px;">url</th>
-                                <th class="col-xs-12 text-center" style="width:200px;">logo</th>
-                                <th class="col-xs-12 text-center" style="width:200px;">status</th>
+                                <th class="col-xs-12 text-center" style="width:200px;">nilai beli</th>
+                                <th class="col-xs-12 text-center" style="width:200px;">nilai jual</th>
+                                <th class="col-xs-12 text-center" style="width:200px;">last update</th>
                                 <th class="col-xs-12 text-center" style="width:200px;">more options</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($results as $result) : ?>
                                 <tr class="text-center table-light" style="font-weight: 500;">
-                                    <td><?php echo $result['id']?></td>
-                                    <td><?php echo $result['nama']?></td>
-                                    <td style="text-transform: lowercase;"><?php echo $result['url']?></td>
-                                    <td><?php echo $result['logo']?></td>
-                                    <td><?php echo $result['status']?></td>
+                                    <td class="nomer"><?php echo $result['id']?></td>
+                                    <td><?php echo $result['bank_id']?></td>
+                                    <td class="url"><?php echo $result['beli']?></td>
+                                    <td><?php echo $result['jual']?></td>
+                                    <td><?php echo $result['date_updated']?></td>
                                     <td>
-                                        <a href="edit_tambah_bank.php?id=<?php echo $result['id']?>">Edit |</a>
-                                        <a href="delete_tambah_bank.php?id=<?php echo $result['id']?>"> hapus</a>
+                                        <a href="edit_tambah_valas.php?id=<?php echo $result['id']?>">Edit |</a>
+                                        <a href="delete_tambah_valas.php?id=<?php echo $result['id']?>"> hapus</a>
                                     </td>
                                 </tr>
                             <?php endforeach ?>               
                         </tbody>   
+                       
                     </table>   
                 </div>
         </div>
