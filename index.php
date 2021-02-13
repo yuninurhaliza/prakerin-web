@@ -1,36 +1,40 @@
-<body>
-    
-    <form action="" method="post">
-        <label for="">nama user</label>
-        <input type="text" name="user"><br><br>
-        <label for="">password</label>
-        <input type="text" name="pass"><br><br>
-        <input type="submit" value="Daftar">
-    </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pesbuk</title>
+
+     <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body class="bg-light">
+    <header>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1>Selamat datang di Pesbuk</h1>
+                        <p>Bergabunglah bersama jutaan orang lainnya...</p>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="login.php" class="btn btn-secondary">Masuk</a>
+                        <a href="register.php" class="btn btn-success">Daftar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img class="img img-responsive" src="img/connect.png" />
+                    </div>
+                </div>
+            </div>
+    </section>
 
 </body>
-
-<?php
-
-    $user   = $_POST['user'];
-    $pass   = md5($_POST['pass']);
-
-    $connect    = mysqli_connect("localhost","root","","register");
-
-    
-    $query      = "INSERT INTO user (nama,pass) VALUES ('".$user."','".$pass."')";
-
-    $hasil = mysqli_query($connect,$query);
-    if ($hasil) {
-        echo 'data berhasil ditambahkan';
-    } else {
-        echo 'data gagal ditambahkan';
-    }
-
-    $q2 = "SELECT id FROM user WHERE nama='".$user."' ";
-    $hasil2 = mysqli_query ($connect,$q2);
-    if(mysqli_num_rows ($hasil2) > 0) {
-        echo "user telah ada";
-    } 
-
-?>
+</html>   
