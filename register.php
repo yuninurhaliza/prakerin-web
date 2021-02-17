@@ -45,6 +45,23 @@ if (isset($_POST['register'])) {
     <title>Register</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <script src="js/jquery.js"></script>
+
+    <style>
+        .icon {
+            width: 40px;
+            height: 38px;
+            margin-left: -30px;
+            background: none;
+            border: none;
+        }
+
+        .password {
+            width: 540px;
+        }
+    </style>
+
 </head>
 
 <body class="bg-light">
@@ -77,7 +94,15 @@ if (isset($_POST['register'])) {
 
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input class="form-control" type="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Harus berisi setidaknya satu angka dan satu huruf besar dan kecil, dan setidaknya 8 karakter atau lebih" required />
+                        <div class="row">
+                            <div class="col-md-11">
+                                <input class="form-control password" type="password" id="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Harus berisi setidaknya satu angka dan satu huruf besar dan kecil, dan setidaknya 8 karakter atau lebih" required />
+                            </div>
+                            <div class="col-md-1">
+                                <button class="icon"><i class="fas fa-eye-slash" id="eyes"></i></button>
+                            </div>
+                        </div>
+
                     </div>
 
                     <input type="submit" class="btn btn-success btn-block" name="register" value="Daftar" />
@@ -92,6 +117,20 @@ if (isset($_POST['register'])) {
 
         </div>
     </div>
+
+    <script type="text/javascript">
+        $("#eyes").click(function() {
+            var baru = $("#eyes").removeClass("fas fa-eye-slash");
+            $("#eyes").addClass("fas fa-eye");
+            $("#password").attr('type', 'text');
+
+            baru.click(function() {
+                $("#eyes").removeClass("fas fa-eye");
+                $("#eyes").addClass("fas fa-eye-slash");
+                $("#password").attr('type', 'password');
+            })
+        })
+    </script>
 
 </body>
 
