@@ -10,14 +10,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 </head>
 
-<body class="bg-light">
+<body>
     <header>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <h1>Selamat datang</h1>
-                        <p>Bergabunglah bersama jutaan orang lainnya...</p>
+                        <h1>Valas Administrator</h1>
                     </div>
                     <div class="col-md-4">
                         <a href="login.php" class="btn btn-secondary">Masuk</a>
@@ -32,7 +31,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <img class="img img-responsive" src="img/connect.png" />
+                    <img class="img img-responsive" src="img/home.png" height="400px" />
                 </div>
             </div>
         </div>

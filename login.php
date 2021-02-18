@@ -45,16 +45,26 @@ if (isset($_POST['login'])) {
     <title>Login</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <style>
+        body {
+            background-image: url(img/login.png);
+            background-repeat: no-repeat;
+            background-size: 800px;
+        }
+    </style>
+
 </head>
 
-<body class="bg-light">
+<body>
 
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-6">
 
-                <p>&larr; <a href="index.php">Home</a>
+            </div>
 
+            <div class="col-md-5 ml-5">
                 <h4>LOGIN</h4>
                 <p>Belum punya akun? <a href="register.php">Daftar di sini</a></p>
 
@@ -71,14 +81,9 @@ if (isset($_POST['login'])) {
                         <input class="form-control" type="password" name="password" placeholder="Password" />
                     </div>
 
-                    <input type="submit" class="btn btn-success btn-block" name="login" value="Masuk" />
+                    <input type="submit" class="btn btn-success" name="login" value="Masuk" />
 
                 </form>
-
-            </div>
-
-            <div class="col-md-6">
-                <!-- isi dengan sesuatu di sini -->
             </div>
 
         </div>

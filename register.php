@@ -70,9 +70,7 @@ if (isset($_POST['register'])) {
         <div class="row">
             <div class="col-md-6">
 
-                <p>&larr; <a href="index.php">Home</a>
-
-                <h4>Bergabunglah bersama ribuan orang lainnya...</h4>
+                <h4>Register</h4>
                 <p>Sudah punya akun? <a href="login.php">Login di sini</a></p>
 
                 <form action="" method="POST">
@@ -105,14 +103,14 @@ if (isset($_POST['register'])) {
 
                     </div>
 
-                    <input type="submit" class="btn btn-success btn-block" name="register" value="Daftar" />
+                    <input type="submit" class="btn btn-success" name="register" value="Daftar" />
 
                 </form>
 
             </div>
 
             <div class="col-md-6">
-                <img class="img img-responsive" src="img/connect.png" />
+
             </div>
 
         </div>
