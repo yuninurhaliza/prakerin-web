@@ -64,7 +64,7 @@ if (isset($_POST['register'])) {
 
 </head>
 
-<body class="bg-light">
+<body>
 
     <div class="container mt-5">
         <div class="row">
@@ -110,7 +110,7 @@ if (isset($_POST['register'])) {
             </div>
 
             <div class="col-md-6">
-
+                <img src="img/register.png" width="600px" style="margin-top: 50px;">
             </div>
 
         </div>
