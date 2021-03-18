@@ -14,9 +14,34 @@
     <title>PPDB</title>
 </head>
 
-<body class="bg-light">
+<body>
 
-    <div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class='container'>
+    <a class="navbar-brand" href="#">PPDB ONLINE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pendaftaran/daftar.php">Daftar Calon Siswa Baru</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pendaftaran/panduan.php">Panduan PPDB Online</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="hasil.php">Lihat Siswa Diterima</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+    <!-- <div class="container" style="margin-top: 100px;">
         <h1 class="text-center mt-5 mb-5">PPDB ONLINE</h1>
         <div class="row justify-content-center mb-5">
             <div class="col-md-4">
@@ -31,7 +56,7 @@
             <a href="pendaftaran/panduan.php" class="btn btn-outline-primary" style="width: 300px;"><i class="fas fa-align-center mr-2"></i>Panduan PPDB Online</a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
