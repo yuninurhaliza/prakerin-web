@@ -1,0 +1,36 @@
+body {
+  font-family: "arial";
+}
+
+h1 {
+  text-align: center;
+  margin-top: -50px;
+  text-transform: uppercase;
+}
+
+table td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+table {
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  padding-top: 25px;
+  height: 50px;
+  width: 100%;
+  right: 0px;
+  border-top: 1px solid gray;
+  left: 0px;
+  bottom: 0px;
+}
+
+img {
+  margin-left: 60px;
+}

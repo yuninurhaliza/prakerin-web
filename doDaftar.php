@@ -13,8 +13,16 @@ $foto       = $_FILES['foto']['name'];
 $tmp        = $_FILES['foto']['tmp_name'];
 $path       = "../foto/" . $foto;
 
+$akta       = $_FILES['akta']['name'];
+$tmp        = $_FILES['akta']['tmp_name'];
+$path       = "../akta/" . $akta;
+
+$kk         = $_FILES['kk']['name'];
+$tmp        = $_FILES['kk']['tmp_name'];
+$path       = "../kk/" . $kk;
+
 if (move_uploaded_file($tmp, $path)) {
-    $query  = mysqli_query($conn, "INSERT INTO pendaftaran SET nama='$nama', jenis_kelamin='$jk', alamat='$alamat', ttl='$ttl', agama='$agama', no_telp='$no_telp', nilai_un='$nilai', foto='$foto' ");
+    $query  = mysqli_query($conn, "INSERT INTO pendaftaran SET nama='$nama', jenis_kelamin='$jk', alamat='$alamat', ttl='$ttl', agama='$agama', no_telp='$no_telp', nilai_un='$nilai', foto='$foto', dok_akta='$akta', dok_kk='$kk' ");
     if ($query) {
         echo "
             <script>
@@ -26,13 +34,3 @@ if (move_uploaded_file($tmp, $path)) {
         echo 'gagal';
     }
 }
-
-
-
-
-// $insert = mysqli_query($conn, "INSERT INTO siswa SET nama='$nama', alamat='$alamat', nilai='$nilai' ");
-
-// if ($insert)
-//     header('Location:../dataSiswa.php');
-// else
-//     echo 'Input Data Gagal...';

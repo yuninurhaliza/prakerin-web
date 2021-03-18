@@ -33,6 +33,9 @@ foreach ($results as $result) {
                 <td style="width:200px">Nama Lengkap</td>
                 <td style="width:30px">:</td>
                 <td>' . $result['nama'] . '</td>
+                <td rowspan="3">
+                    <img src="foto/' . $result['foto'] . ' " width="150px" height="150px">
+                </td>
             </tr>
             <tr>
                 <td style="width:200px">Jenis Kelamin</td>

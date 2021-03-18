@@ -18,19 +18,16 @@
 
 
 
-    <div class="container">
-        <h1 class="text-center mt-5 mb-5">Daftar Calon Siswa Baru</h1>
+    <div class="container mb-5">
+        <h1 class="text-center mt-5 mb-4">Daftar Calon Siswa Baru</h1>
         <div class="row justify-content-center">
+        <small class="mb-2">Sebelum Anda Mengisi Formulir Pendaftaran Pastikan Anda Sudah Membaca Panduan PPDB Online</small>
             <div class="col-md-8">
                 <form method="post" action="doDaftar.php" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="nama">Nama Lengkap</label>
                         <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Lengkap" required>
                     </div>
-                    <!-- <div class="form-group">
-                        <label for="jk">Jenis Kelamin</label>
-                        <input type="text" class="form-control" name="jk" id="jk" placeholder="Jenis Kelamin" required>
-                    </div> -->
                     <div class="form-group">
                         <label>Jenis Kelamin</label>
                         <select class="form-control" name="jk">
@@ -63,7 +60,20 @@
                         <label for="foto">Foto</label>
                         <input type="file" class="form-control-file" name="foto" id="foto">
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100px;"><i class="fas fa-plus mr-2"></i>Daftar</button>
+                    <div class="form-group">
+                        <h5 class="mb-2">Upload Dokumen Persyaratan</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="akta">Akta Kelahiran</label>
+                                <input type="file" class="form-control-file" name="akta" id="akta">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="kk">Kartu Keluarga</label>
+                                <input type="file" class="form-control-file" name="kk" id="kk">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3" style="width: 100px;"><i class="fas fa-plus mr-2"></i>Daftar</button>
                 </form>
             </div>
         </div>
